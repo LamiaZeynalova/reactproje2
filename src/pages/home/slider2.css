@@ -1,0 +1,12 @@
+.slider2{
+    border: 1px solid black;
+    border-radius: 10px;
+    margin-right: 10px;
+    display: flex;
+    flex-direction: row ;
+    justify-content: space-between;
+    gap:5px
+}
+.slider2 img{
+    width: 160px;
+}

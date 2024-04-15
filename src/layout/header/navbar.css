@@ -1,0 +1,284 @@
+*{ 
+     margin: 0;
+     padding: 0;
+}
+nav{
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    position: sticky;
+    top: 0;
+    z-index: 999;
+    background-color: hsl(0, 0%, 100%);
+}
+
+
+nav img{
+    width: 170px;
+    margin-left:0px;
+    padding-left: 0;
+}
+    .end{
+        font-size: 20px;
+        color: #0fb78d;
+    
+    }
+.NavLinks{
+    display: flex;
+    gap: 40px;
+    list-style-type: none;
+}
+.NavLinks .active{
+    color: black;
+    text-decoration: underline;
+}
+.NavLinks li a{
+    text-decoration: none;
+    color: rgb(72, 71, 71);
+    font-size: 13px;
+    text-transform: uppercase;
+    letter-spacing: 0.1rem;
+}
+.icons{
+    display: flex;
+    gap: 22px;
+    font-size: 18px;
+}
+/* //////////////////////////basket sidebar css////////// */
+.cartIcon{
+    position: relative;
+}
+.cartIcon svg{
+    font-size: 21px;
+}
+.cartIcon span{
+    width: 17px;
+    height: 17px;
+    border-radius: 100%;
+    color: white;
+    background-color: black;
+    position: absolute;
+    top: -9px;
+    left: 13px;
+    display: flex;
+    font-size: 11px;
+    justify-content: center;
+    align-items: center;
+}
+.sidebar{
+    transition: 0.7s;
+    width: 300px;
+    height: 100%;
+    position: fixed;
+    top: 0px;
+    right: -300px;
+    background-color: #FFFFFF;
+    z-index: 1000;
+}
+.sidebar.open {
+  right: 0;
+}
+.cart-sidebar{
+    transition: 0.7s;
+    width: 300px;
+    height: 100%;
+    position: fixed;
+    top: 0px;
+    right: -300px;
+    background-color: #FFFFFF;
+    z-index: 100;
+}
+.cart-sidebar h3{
+    position: relative;
+    top: 100px;
+    left: 140px;
+}
+.btns{
+    position: absolute;
+    bottom: 10px;
+    left: 100px;
+}
+.btns button{
+    border: none;
+    width: 148px;
+    height: 50px;
+    background-color: black;
+    color: white;
+    border-radius: 60px;
+    cursor: pointer;
+}
+.cart-sidebar.open{
+    right: 0px;
+}
+/* ///////////////////////hamburgerMenu css//////////////////// */
+.burgerMenu{
+    display: none;
+    margin-left: 15px;
+    align-items: center;
+    font-size: 25px!important;
+}
+.NavLinks-sidebar{
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    list-style: none;
+    gap: 40px;
+    top: 60px;
+    left: 25px;
+    text-decoration: none;
+    color: rgb(77, 76, 76);
+}
+.close{
+    position: absolute;
+    font-size: 25px;
+    right: 10px;
+    top: 70px;
+    color:black;
+    cursor: pointer;
+}
+
+.sidebar  .NavLinks-sidebar .active-sidebar{
+    color: black;
+    text-decoration: underline;
+}
+.NavLinks-sidebar li a{
+    text-decoration: none;
+    color: rgb(72, 71, 71);
+    font-size: 13px;
+    text-transform: uppercase;
+    letter-spacing: 0.1rem;
+}
+
+
+/* //////////////////////cart-products css/////////////////// */
+.basket-img{
+    width: 100px;
+    height: 100px;
+    cursor: pointer;
+}
+.product-info{
+    position: relative;
+    top: 120px;
+    margin-bottom: 5px;
+    margin-left: 5px;
+    display: flex;
+    gap: 10px;
+}
+.delete-icon{
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    right: 0px;
+    cursor: pointer;
+    background-color: gray;
+    display: none;
+}
+.product-img{
+    position: relative;
+}
+.product-img:hover .delete-icon{
+    display: inline-block;
+}
+
+
+.burger-sidebar {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 300px; 
+    height: 100%;
+    background-color: #fff;
+    box-shadow: 2px 0 5px rgba(0,0,0,0.5);
+    transform: translateX(-100%);
+    transition: transform 0.3s ease-out;
+    z-index: 999;
+  }
+  
+  .burger-sidebar.open {
+    transform: translateX(0);
+  }
+  .burgerhead{
+    display: flex;
+    height: 3.25rem;}
+   
+
+ .burgerhead .btn1{
+    background-color: black;
+    width: 150px;
+    align-items: center;
+    justify-content: center;
+    gap: 3px;
+    color: white;
+
+ }
+ .burgerhead .btn2{
+    background-color: white;
+    width: 150px;
+    align-items: center;
+    justify-content: center;
+    gap: 3px;
+
+ }
+ 
+   .btnclose{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width:100%;
+    padding: 20px;
+    background-color: #047559;
+    text-align: center;
+   }
+   .label{
+    width: 30px;
+    height: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(184, 5, 53);
+    color: white;
+    font-size: 10px;
+    font-weight: 500;
+    position: absolute;
+    top: 16px;
+    left: 51%;
+}
+@media only screen and (max-width: 1220px){
+    .label{
+        left:46%
+    }
+}
+
+   @media only screen and (max-width: 995px){
+    .burgerMenu{
+        display: block;
+    }
+    .NavLinks{
+        display: none;
+    }
+    .burger{
+        display: block;
+    }
+    .adminpanel{
+        display: none;
+    }
+}
+  @media (max-width: 768px) {
+    .burger {
+      display: block;
+    }
+  
+    .logo img {
+      width: 120px; 
+    }
+  
+    .nav-links {
+      display: none; 
+    }
+  
+    .cart {
+      display: block;
+    }
+  }
+  
